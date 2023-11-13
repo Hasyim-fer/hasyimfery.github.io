@@ -19,3 +19,43 @@ footer {
 section {
   padding-top: 5rem;
 }
+
+section.tools {
+  margin-bottom: 15rem;
+}
+
+.parent-tool {
+  display: flex;
+  justify-content: center;
+}
+.box-img {
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+}
+.box-img:nth-child(13) img.tool-img,
+.box-img:first-child img.tool-img {
+  height: 95px;
+}
+
+@media screen and (max-width: 576px) {
+  .box-img:nth-child(8) img.tool-img {
+    height: 30px;
+  }
+  .box-img:nth-child(11) img.tool-img {
+    height: 40px;
+  }
+  .box-img:nth-child(13) img.tool-img {
+    width: 40px;
+  }
+  .box-img {
+    width: 100px;
+    height: 100px;
+  }
+  .tool-img {
+    width: 80px;
+    height: 80px;
+  }
+}

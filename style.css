@@ -1,0 +1,21 @@
+nav.navbar {
+  background: linear-gradient(#00358a, #0052d6);
+}
+.profile-section {
+  padding-top: 6rem;
+  background-color: #c2d9ff;
+  /* background-color: hsla(253, 78%, 42%, 0.6); */
+}
+
+.project {
+  background-color: #c2d9ff;
+}
+
+footer {
+  background: linear-gradient(#0052d6, #003da0, #002663);
+  color: white;
+}
+
+section {
+  padding-top: 5rem;
+}

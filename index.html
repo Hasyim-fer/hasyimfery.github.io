@@ -57,7 +57,7 @@
             <h2>About Me</h2>
           </div>
         </div>
-        <div class="row justify-content-center fs-5 text-center">
+        <div class="row justify-content-center fs-5 text-center wrap">
           <div class="col-md-5" data-aos="fade-right" data-aos-duration="1000">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem officia voluptatem maxime soluta libero, saepe id. Ipsam doloribus odit sunt.</p>
           </div>
@@ -343,10 +343,12 @@
       const navbar = document.querySelector("button.navbar-toggler");
       const menuToggle = document.querySelector("div.navbar-nav");
       const navCollapse = document.querySelector("div#navbarNavAltMarkup");
+      const button = document.querySelector("button");
 
       menuToggle.onclick = function () {
-        navbar.classList.toggle("collapsed");
-        navCollapse.classList.toggle("show");
+        navbar.classList.add("collapsed");
+        navCollapse.classList.remove("show");
+        button.ariaExpanded = "false";
       };
     </script>
 
@@ -357,14 +359,14 @@
 
       toolsImage.forEach((img, i) => {
         img.dataset.aos = "zoom-in";
-        img.dataset.aosDelay = i * 100;
-        img.dataset.aosDuration = 500;
+        img.dataset.aosDelay = i * 120;
+        img.dataset.aosDuration = 600;
       });
 
       AOS.init({
         once: true,
         duration: 700,
-        delay: 150,
+        delay: 350,
       });
     </script>
 

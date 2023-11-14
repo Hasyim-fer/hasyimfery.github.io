@@ -18,7 +18,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark shadow fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Fery Hasyim</a>
+        <a class="navbar-brand" href="#home">Fery Hasyim</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -36,10 +36,10 @@
     <!-- End Navbar -->
 
     <!-- Main Section -->
-    <section class="profile-section text-center">
+    <section class="profile text-center">
       <img src="img/feryha.png" alt="feryha" width="200" class="rounded-circle img-thumbnail" />
       <h1 class="display-4">Muhamad Fery Hasyim</h1>
-      <p class="lead">Freelancer | Web Designer | Fullstack Developer</p>
+      <p class="lead">Freelancer | Fullstack Developer | Web Designer</p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#fff"
@@ -339,12 +339,32 @@
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
+    <script>
+      const navbar = document.querySelector("button.navbar-toggler");
+      const menuToggle = document.querySelector("div.navbar-nav");
+      const navCollapse = document.querySelector("div#navbarNavAltMarkup");
+
+      menuToggle.onclick = function () {
+        navbar.classList.toggle("collapsed");
+        navCollapse.classList.toggle("show");
+      };
+    </script>
+
     <!-- script AOS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
+      const toolsImage = document.querySelectorAll(".tool-img");
+
+      toolsImage.forEach((img, i) => {
+        img.dataset.aos = "zoom-in";
+        img.dataset.aosDelay = i * 100;
+        img.dataset.aosDuration = 500;
+      });
+
       AOS.init({
         once: true,
         duration: 700,
+        delay: 150,
       });
     </script>
 

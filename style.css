@@ -3,6 +3,7 @@ nav.navbar {
 }
 
 section {
+  overflow: hidden;
   padding-top: 5rem;
 }
 
@@ -58,8 +59,6 @@ footer {
   }
 
   section.about .wrap {
-    box-sizing: border-box;
-    overflow: hidden;
     margin-bottom: 3rem;
   }
 

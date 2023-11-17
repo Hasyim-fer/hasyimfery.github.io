@@ -8,11 +8,11 @@ section {
 }
 
 section.project,
-section.profile {
+section.profile,
+section.certificate {
   background-color: #c2d9ff;
 }
 
-section.tools,
 section.about .wrap {
   margin-bottom: 15rem;
 }
@@ -37,6 +37,97 @@ section.about .wrap {
 
 .tools .parent-tool > * {
   padding: 5px;
+}
+
+.certificate-box {
+  position: relative;
+  background: linear-gradient(#0052d6, #00358a);
+  border-radius: 10px;
+  height: 550px;
+  transform-style: preserve-3d;
+}
+
+.certificate-box::before {
+  content: "CERTIFICATE";
+  position: absolute;
+  color: white;
+  font-size: 4em;
+  font-weight: bold;
+  font-style: italic;
+  top: 45px;
+  left: -100px;
+  opacity: 0;
+  transition: 0.7s;
+}
+
+.certificate-box:hover::before {
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0.3;
+}
+
+.certificate-box::after {
+  content: "BOOTCAMP";
+  position: absolute;
+  color: white;
+  font-size: 4em;
+  font-weight: bold;
+  font-style: italic;
+  top: 400px;
+  left: 400px;
+  opacity: 0;
+  transition: 0.7s;
+}
+
+.certificate-box:hover::after {
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0.3;
+}
+
+.description {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-size: 1.5em;
+  opacity: 0;
+  transform: translate3d(0, 0, 50px);
+  transition: 0.7s;
+}
+
+.certificate-box:hover .description {
+  top: 20px;
+  opacity: 1;
+}
+
+.btn-cstm {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate3d(-50%, 0, 10px);
+  opacity: 0;
+  transition: 0.7s;
+  box-shadow: 0px 0px 10px 1px black;
+}
+
+.certificate-box:hover .btn-cstm {
+  bottom: 20px;
+  opacity: 1;
+}
+
+.certificate-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 40%;
+  transform: translate3d(-50%, -50%, 100px);
+  transition: 0.7s;
+}
+
+.certificate-box:hover .certificate-img {
+  transform: translate3d(-50%, -50%, 100px) scale(1.2);
 }
 
 footer {
@@ -70,10 +161,14 @@ footer {
     width: 60%;
   }
 
-  section.tools {
+  /* section.tools {
     margin-bottom: 3rem;
-  }
+  } */
   section.contact .container {
     margin-bottom: 16rem;
+  }
+
+  .certificate-img {
+    max-width: 70%;
   }
 }
